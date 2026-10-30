@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chady Hage — Portfolio</title>
+<meta name="description" content="Portfolio de Chady Hage, étudiant à l'EPSI Lyon : motion design, architecture 3D, machine de Rube Goldberg, The Next Play, Live In Black, projets PHP et MySQL.">
+<meta property="og:title" content="Chady Hage — Portfolio">
+<meta property="og:description" content="Je transforme des idées en projets concrets — de A à Z.">
+<meta property="og:image" content="https://chadyhage.github.io/assets/villa/villa-01-piscine-a-debordement.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23191714'/%3E%3Ctext x='32' y='43' font-family='Arial' font-weight='700' font-size='30' fill='%23E8803A' text-anchor='middle'%3ECH%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Caveat:wght@600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<script type="module" src="https://unpkg.com/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script>
+<style>
+:root{--bg:#FBFAF8;--paper:#FFFFFF;--ink:#191714;--ink2:#3A3632;--mute:#5C5750;--line:#E2DDD5;--acc:#E8803A;--accInk:#9E5727;--accSoft:#F9EBE1;--dark:#14120F}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+img,video{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+.mono{font-family:'JetBrains Mono',ui-monospace,monospace}
+.eyebrow{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accInk)}
+h1,h2,h3{font-family:'Bricolage Grotesque',Inter,sans-serif;letter-spacing:-.02em;margin:0;text-wrap:balance}
+p{text-wrap:pretty}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:20;background:rgba(251,250,248,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;gap:20px;min-height:60px;flex-wrap:wrap}
+.brand{font-family:'Bricolage Grotesque',Inter,sans-serif;font-weight:800;font-size:19px;text-decoration:none;letter-spacing:-.02em}
+.nav ul{list-style:none;margin:0 0 0 auto;padding:0;display:flex;gap:4px;flex-wrap:wrap}
+.nav ul a{display:block;padding:8px 10px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:500;color:var(--ink2)}
+.nav ul a:hover{background:var(--accSoft);color:var(--ink)}
+.btn{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 18px;border-radius:999px;border:1.5px solid var(--ink);background:var(--ink);color:#fff;font-weight:600;font-size:15px;text-decoration:none;cursor:pointer}
+.btn:hover{background:#000}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.ghost:hover{background:var(--accSoft)}
+.btn svg{width:17px;height:17px;flex-shrink:0}
+
+/* hero */
+.hero{padding:64px 0 40px}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:48px;align-items:center}
+.hero h1{font-size:clamp(46px,8vw,88px);font-weight:800;line-height:.95;letter-spacing:-.04em;margin:10px 0 14px}
+.hero .study{font-size:18px;font-weight:600;margin:0}
+.hero .tag{font-family:'Bricolage Grotesque',Inter,sans-serif;font-size:clamp(20px,2.6vw,26px);font-weight:500;color:var(--ink2);margin:10px 0 20px}
+.hero .tag mark{background:linear-gradient(transparent 58%,#F4C3A0 58%);color:inherit}
+.pill{display:inline-flex;align-items:center;gap:10px;padding:8px 16px;border:1.5px solid var(--acc);border-radius:999px;font-size:15px;font-weight:600;background:var(--paper)}
+.pill i{width:8px;height:8px;border-radius:50%;background:var(--acc)}
+.pill span{font-weight:400;color:var(--mute)}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.photo{position:relative;width:240px;height:240px;justify-self:end}
+.photo::before{content:"";position:absolute;inset:14px -14px -14px 14px;border-radius:28px;background:var(--acc)}
+.photo img{position:relative;width:240px;height:240px;object-fit:cover;border-radius:28px}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:2px solid var(--ink);border-bottom:1px solid var(--line);margin-top:8px}
+.stat{padding:20px 18px 18px;border-right:1px solid var(--line)}
+.stat:last-child{border-right:0}
+.stat b{display:block;font-family:'Bricolage Grotesque',Inter,sans-serif;font-size:clamp(30px,4vw,44px);font-weight:800;letter-spacing:-.03em;line-height:1}
+.stat span{display:block;margin-top:6px;font-size:14px;color:var(--mute)}
+
+/* sections */
+section.block{padding:72px 0 8px}
+.head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:32px;align-items:end;margin-bottom:28px}
+.head h2{font-size:clamp(32px,4.4vw,48px);font-weight:800;line-height:1;margin-top:8px}
+.head p{margin:0;color:var(--ink2);font-size:17px}
+.facts{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.facts span{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:12px;padding:5px 10px;border-radius:999px;background:var(--paper);border:1px solid var(--line);color:var(--ink2)}
+
+/* motion grid */
+.vgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(210px,100%),1fr));gap:18px}
+.vcard{display:flex;flex-direction:column;gap:9px}
+.vcard video{width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:14px;background:#0b0a09}
+.vcard .t{font-weight:600;font-size:14.5px;line-height:1.3}
+.vcard .m{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:12px;color:var(--mute)}
+.vcard.feat{grid-column:span 1}
+
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(260px,100%),1fr));gap:12px}
+.gal button{all:unset;cursor:zoom-in;position:relative;border-radius:12px;overflow:hidden;display:block;aspect-ratio:16/9;background:#ddd}
+.gal button:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+.gal img{width:100%;height:100%;object-fit:cover;transition:transform .35s ease}
+.gal button:hover img{transform:scale(1.04)}
+.gal figcaption{position:absolute;left:0;right:0;bottom:0;padding:22px 12px 9px;background:linear-gradient(transparent,rgba(12,10,8,.78));color:#fff;font-size:13px;font-weight:500}
+.gal .big{grid-column:span 2;grid-row:span 2;aspect-ratio:auto}
+@media (max-width:640px){.gal .big{grid-column:span 1;grid-row:span 1;aspect-ratio:16/9}}
+
+/* rube */
+.rube{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px}
+.panel{background:var(--paper);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+.panel .lbl{padding:12px 16px;border-bottom:1px solid var(--line);font-family:'JetBrains Mono',ui-monospace,monospace;font-size:12px;color:var(--mute);display:flex;justify-content:space-between;gap:10px}
+.panel video{width:100%;aspect-ratio:832/464;background:#000}
+model-viewer{width:100%;height:100%;min-height:340px;background:radial-gradient(circle at 50% 40%,#fff,#ECE8E1)}
+.dl{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 22px}
+.case{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-bottom:22px}
+.case div{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:16px}
+.case b{display:block;font-family:'Bricolage Grotesque',Inter,sans-serif;font-size:17px;margin-bottom:4px}
+.case p{margin:0;font-size:14.5px;color:var(--ink2)}
+.case div.acc{border:1.5px solid var(--acc);background:var(--accSoft)}
+
+/* tnp */
+.tnp{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:18px;align-items:stretch}
+.yt{all:unset;cursor:pointer;position:relative;display:block;border-radius:16px;overflow:hidden;aspect-ratio:16/9;background:#000}
+.yt img{width:100%;height:100%;object-fit:cover;opacity:.85}
+.yt .play{position:absolute;inset:0;display:grid;place-items:center}
+.yt .play span{width:76px;height:76px;border-radius:50%;background:var(--acc);display:grid;place-items:center;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+.yt .cap{position:absolute;left:16px;bottom:14px;color:#fff;font-weight:600;font-size:15px;text-shadow:0 1px 8px rgba(0,0,0,.6)}
+.yt:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+.yt iframe{width:100%;height:100%;border:0}
+.tgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.tgrid img{width:100%;height:100%;object-fit:cover;border-radius:12px;aspect-ratio:4/3}
+
+/* cards */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:16px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:10px}
+.card h3{font-size:22px;font-weight:700}
+.card .role{font-size:14px;color:var(--mute);margin:-6px 0 2px}
+.card ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:7px}
+.card li{display:grid;grid-template-columns:10px minmax(0,1fr);gap:8px;font-size:15px;color:var(--ink2)}
+.card li::before{content:"";width:6px;height:6px;margin-top:9px;background:var(--acc)}
+.card .links{margin-top:auto;padding-top:6px;display:flex;flex-wrap:wrap;gap:8px}
+.chip{display:inline-flex;align-items:center;gap:6px;min-height:36px;padding:0 13px;border-radius:999px;border:1px solid var(--ink);font-size:13.5px;font-weight:600;text-decoration:none}
+.chip:hover{background:var(--accSoft)}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tags span{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:11.5px;padding:3px 9px;border-radius:6px;background:var(--accSoft);color:var(--accInk)}
+
+/* code */
+.code .card{border-top:4px solid var(--ink)}
+
+/* contact */
+.contact{margin:88px 0 0;background:var(--dark);color:#F5F1EA;padding:64px 0}
+.contact h2{font-size:clamp(34px,5vw,56px);font-weight:800;line-height:1}
+.contact p{color:#CFC8BD;font-size:17px;max-width:560px}
+.contact .btn{background:var(--acc);border-color:var(--acc);color:#191714}
+.contact .btn.ghost{background:transparent;color:#F5F1EA;border-color:#F5F1EA}
+.contact .btn.ghost:hover{background:rgba(255,255,255,.08)}
+.contact .sign{font-family:Caveat,cursive;font-size:30px;color:#F4C3A0;margin-top:26px}
+footer{background:var(--dark);color:#9C958A;font-size:13px;padding:0 0 28px}
+
+/* lightbox */
+dialog{border:0;padding:0;background:transparent;max-width:min(1200px,94vw);max-height:92vh;overflow:visible}
+dialog::backdrop{background:rgba(10,9,8,.88)}
+dialog img{max-height:82vh;width:auto;margin:0 auto;border-radius:10px}
+dialog .bar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:12px;color:#fff}
+dialog .bar p{margin:0;font-weight:500}
+dialog .bar div{display:flex;gap:8px}
+dialog button.nb{min-width:44px;min-height:44px;border-radius:999px;border:1.5px solid #fff;background:transparent;color:#fff;font-size:15px;font-weight:600;cursor:pointer;padding:0 14px}
+dialog button.nb:hover{background:rgba(255,255,255,.12)}
+
+@media (max-width:860px){
+  .hero .wrap{grid-template-columns:1fr;gap:28px}
+  .photo{justify-self:start;width:180px;height:180px;order:-1}
+  .photo img{width:180px;height:180px}
+  .head,.rube,.tnp{grid-template-columns:1fr}
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .stat:nth-child(2){border-right:0}
+  .stat:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .case{grid-template-columns:1fr}
+  .nav ul{margin-left:0;width:100%;overflow-x:auto;flex-wrap:nowrap;padding-bottom:6px}
+  .nav ul a{white-space:nowrap}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.gal img{transition:none}}
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Sections">
+<div class="wrap">
+<a class="brand" href="#top">Chady Hage</a>
+<ul>
+<li><a href="#motion">Motion design</a></li>
+<li><a href="#villa">Villa 3D</a></li>
+<li><a href="#rube">Rube Goldberg</a></li>
+<li><a href="#tnp">The Next Play</a></li>
+<li><a href="#projets">Entrepreneuriat</a></li>
+<li><a href="#code">Code</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</div>
+</nav>
+
+<header class="hero" id="top">
+<div class="wrap">
+<div>
+<div class="eyebrow">Portfolio · 2026</div>
+<h1>Chady Hage</h1>
+<p class="study">Étudiant en 1<sup>re</sup> année à l'EPSI Lyon — parcours « Les fondamentaux », vers le Bachelor Développeur IA</p>
+<p class="tag">Je transforme des idées en projets concrets — <mark>de A à Z</mark>.</p>
+<div class="pill"><i aria-hidden="true"></i>En recherche de stage <span>· IA · automatisation · développement · gestion de projet</span></div>
+<div class="actions">
+<a class="btn" href="cv/CV_Chady_Hage.pdf" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>Télécharger mon CV</a>
+<a class="btn ghost" href="mailto:hagechady4@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>M'écrire</a>
+<a class="btn ghost" href="https://www.linkedin.com/in/chady-hage-a68b50421" rel="noopener">LinkedIn</a>
+<a class="btn ghost" href="https://github.com/Chadyhage" rel="noopener">GitHub</a>
+</div>
+</div>
+<div class="photo"><img src="assets/img/chady.jpg" alt="Photo de Chady Hage" width="240" height="240"></div>
+</div>
+<div class="wrap">
+<div class="stats">
+<div class="stat"><b>7</b><span>projets menés, de l'idée au rendu</span></div>
+<div class="stat"><b>14</b><span>vidéos en motion design</span></div>
+<div class="stat"><b>2 000+</b><span>spectateurs réunis lors de nos événements</span></div>
+<div class="stat"><b>127</b><span>fonctionnalités spécifiées pour Live In Black</span></div>
+</div>
+</div>
+</header>
+
+<main>
+
+<section class="block" id="motion">
+<div class="wrap">
+<div class="head">
+<div><div class="eyebrow">01 · Création</div><h2>Motion design</h2></div>
+<div><p>Une série de 14 vidéos courtes au format vertical — énigmes, dilemmes, simulations — conçues pour TikTok, Instagram Reels et YouTube Shorts. Scénario, identité visuelle, animation et montage : chaque épisode est pensé pour accrocher dès la première seconde et garder le spectateur jusqu'à la révélation finale.</p>
+<div class="facts"><span>Scénario</span><span>Motion design</span><span>Montage</span><span>Voix IA</span><span>Stratégie de publication</span></div></div>
+</div>
+<div class="vgrid" id="vgrid"></div>
+</div>
+</section>
+
+<section class="block" id="villa">
+<div class="wrap">
+<div class="head">
+<div><div class="eyebrow">02 · Architecture &amp; 3D</div><h2>Villa en bord de mer à Cotonou</h2></div>
+<div><p>Projet personnel de conception architecturale : une villa face à la mer, pensée pour être visitée en réalité virtuelle. Cinq suites, cinéma d'une vingtaine de places, club privé, piscine à débordement avec bar immergé, hangar pour les véhicules. Ventilation naturelle, fusion intérieur-extérieur, bois, pierre claire, cuivre et terracotta.</p>
+<div class="facts"><span>Twinmotion</span><span>7 blocs GLB</span><span>Scripts Python</span><span>Visite VR</span></div></div>
+</div>
+<div class="gal" id="villaGal"></div>
+</div>
+</section>
+
+<section class="block" id="rube">
+<div class="wrap">
+<div class="head">
+<div><div class="eyebrow">03 · Ingénierie · EPSI</div><h2>Machine de Rube Goldberg</h2></div>
+<div><p>Workshop de 1<sup>re</sup> année, groupe de quatre — j'en étais le chef de projet. Le défi : faire parcourir à une bille de 20 mm un trajet mécanique et électronique entièrement autonome, dans une boîte de 40 × 40 × 20 cm, pendant 60 à 120 secondes, en touchant au moins quatre faces.</p>
+<div class="facts"><span>Arduino Mega</span><span>Capteurs infrarouges</span><span>Servomoteurs</span><span>Blender</span><span>Impression 3D</span></div></div>
+</div>
+<div class="rube">
+<div class="panel"><div class="lbl"><span>Démonstration du prototype</span><span>1 min 16</span></div><video controls preload="metadata" playsinline poster="assets/rube/rube-02-face.jpg"><source src="assets/rube/demo-machine.mp4" type="video/mp4">Votre navigateur ne lit pas cette vidéo.</video></div>
+<div class="panel"><div class="lbl"><span>Modèle 3D — faites-le tourner</span><span>glisser · zoomer</span></div><model-viewer src="assets/rube/machine.glb" poster="assets/rube/rube-01-vue-3d.jpg" alt="Modèle 3D interactif de la machine de Rube Goldberg" camera-controls touch-action="pan-y" auto-rotate auto-rotate-delay="2000" rotation-per-second="18deg" shadow-intensity="0.6" exposure="1.05" camera-orbit="35deg 72deg auto" loading="lazy"></model-viewer></div>
+</div>
+<div class="dl">
+<a class="btn" href="assets/rube/rapport-technique-rube-goldberg.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/><path d="M8 13h8M8 17h5"/></svg>Lire le rapport technique (PDF)</a>
+<a class="btn ghost" href="assets/rube/machine-rube-goldberg.blend" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>Fichier Blender (.blend · 17 Mo)</a>
+<a class="btn ghost" href="assets/rube/machine.glb" download>Modèle 3D (.glb · 2,7 Mo)</a>
+</div>
+<div class="case">
+<div><b>Le problème</b><p>Le parcours devait être entièrement imprimé en résine : impressions trop longues, pièces ratées, ajustements impossibles dans la boîte réelle.</p></div>
+<div><b>L'alternative</b><p>Rails en carton plume réglables à la main, pièces 3D conservées là où elles comptent, ascenseur à spirale entraîné par un motoréducteur 12 V.</p></div>
+<div class="acc"><b>Le résultat</b><p>Un prototype fiable qui tient le cahier des charges : bille autonome de 60 à 120 s, quatre faces touchées, aucune intervention humaine.</p></div>
+</div>
+<div class="gal" id="rubeGal"></div>
+</div>
+</section>
+
+<section class="block" id="tnp">
+<div class="wrap">
+<div class="head">
+<div><div class="eyebrow">04 · Média &amp; événements</div><h2>The Next Play</h2></div>
+<div><p>Média basket co-fondé à Lomé. Je filme les matchs, je monte les vidéos et je crée les animations — jusqu'à 230 000 vues par mois sur Instagram, en croissance 100 % organique. J'ai démarché le youtubeur HandleYourGame (220 000 abonnés) : deux événements au Stade Omnisports de Lomé, plus de 1 000 spectateurs chacun.</p>
+<div class="facts"><span>Tournage</span><span>Montage</span><span>Partenariats</span><span>Événementiel</span><span>Site web</span></div></div>
+</div>
+<div class="tnp">
+<button class="yt" type="button" id="ytBtn" aria-label="Lire la vidéo de l'événement avec HandleYourGame sur YouTube">
+<img src="https://i.ytimg.com/vi/1dl2BxFwS0g/hqdefault.jpg" alt="" loading="lazy">
+<span class="play" aria-hidden="true"><span><svg width="28" height="28" viewBox="0 0 24 24" fill="#191714"><path d="M8 5v14l11-7z"/></svg></span></span>
+<span class="cap">Événement avec HandleYourGame — Stade Omnisports de Lomé</span>
+</button>
+<div class="tgrid">
+<img src="assets/tnp/hero.jpg" alt="Gymnase plein lors d'un événement The Next Play" loading="lazy">
+<img src="assets/tnp/galerie-tribunes.jpg" alt="Tribunes pendant un événement" loading="lazy">
+<img src="assets/tnp/galerie-joueurs.jpg" alt="Joueurs en maillots The Next Play" loading="lazy">
+<img src="assets/tnp/tournoi-1v1.jpg" alt="Affiche du tournoi 1v1 The Next Play" loading="lazy">
+</div>
+</div>
+<div class="dl">
+<a class="btn" href="https://thenextplay.site/" rel="noopener">Voir le site thenextplay.site</a>
+<a class="btn ghost" href="https://www.instagram.com/the_next_play2k25" rel="noopener">Instagram @the_next_play2k25</a>
+</div>
+</div>
+</section>
+
+<section class="block" id="projets">
+<div class="wrap">
+<div class="head">
+<div><div class="eyebrow">05 · Entrepreneuriat</div><h2>Mes entreprises</h2></div>
+<div><p>Deux projets que je porte seul, de la première idée jusqu'au lancement : le produit, les chiffres, le juridique et le commercial.</p></div>
+</div>
+<div class="cards">
+<article class="card">
+<h3>Live In Black</h3>
+<p class="role">Fondateur · billetterie mobile, Bénin et Togo · lancement visé en 2027</p>
+<ul>
+<li>127 fonctionnalités spécifiées sur 6 espaces, user stories, user flows et cahier des charges du développeur</li>
+<li>Modèle économique complet et simulateur financier sur 7 marchés d'Afrique de l'Ouest</li>
+<li>Paiements Mobile Money et carte via FedaPay</li>
+<li>Création de la société, politiques de confidentialité, contrats avec le développeur</li>
+<li>Démarchage des premiers organisateurs et contrats de lancement</li>
+</ul>
+<div class="tags"><span>Produit</span><span>Finance</span><span>Juridique</span><span>Commercial</span><span>Pilotage tech</span></div>
+</article>
+<article class="card">
+<h3>TrokTrok</h3>
+<p class="role">Fondateur · plateforme de troc entre particuliers</p>
+<ul>
+<li>On n'achète pas, on échange : annonce publiée en 30 secondes</li>
+<li>Jauge qui indique si l'échange proposé est équilibré</li>
+<li>Négociation intégrée entre les deux parties, zéro commission</li>
+<li>Script d'une publicité audio de 29 secondes pour la radio et les réseaux</li>
+</ul>
+<div class="tags"><span>Produit</span><span>Web</span><span>Communication</span></div>
+<div class="links"><a class="chip" href="https://troktrok.com/" rel="noopener">troktrok.com</a></div>
+</article>
+</div>
+</div>
+</section>
+
+<section class="block code" id="code">
+<div class="wrap">
+<div class="head">
+<div><div class="eyebrow">06 · Développement &amp; data</div><h2>Code</h2></div>
+<div><p>Ce que j'apprends à l'EPSI, je le mets tout de suite en pratique : bases de données conçues avec Merise, requêtes SQL, sites PHP connectés à MySQL. Le code est sur GitHub.</p>
+<div class="facts"><span>PHP</span><span>SQL · MySQL</span><span>Merise (MCD · MLD)</span><span>HTML · CSS</span><span>Python</span><span>Arduino</span><span>Git</span></div></div>
+</div>
+<div class="cards">
+<article class="card">
+<h3>Base de données Animal Crossing</h3>
+<p class="role">Projet transversal SQL · groupe de 3</p>
+<ul>
+<li>Modélisation Merise (MCD puis MLD) d'une base MySQL de 8 tables, avec contraintes d'intégrité</li>
+<li>Site PHP de trois pages, filtres passés dans l'URL, requêtes paramétrées</li>
+<li>Chaque page affiche ses requêtes SQL, leurs paramètres et leur temps d'exécution</li>
+</ul>
+<div class="links"><a class="chip" href="https://github.com/Chadyhage/acnh-projet-bdd" rel="noopener">Voir le code</a></div>
+</article>
+<article class="card">
+<h3>Le jeu du plus ou moins</h3>
+<p class="role">Projet PHP / MySQL · groupe de 4</p>
+<ul>
+<li>Le joueur cherche un nombre secret, avec un nombre d'essais limité selon le niveau</li>
+<li>Comptes joueurs, parties enregistrées en base, statistiques par joueur</li>
+<li>Classement par niveau</li>
+</ul>
+<div class="links"><a class="chip" href="https://github.com/Chadyhage/eval_sn1_phpmysql_2" rel="noopener">Voir le code</a></div>
+</article>
+<article class="card">
+<h3>Agenda d'événements</h3>
+<p class="role">Évaluation PHP / MySQL</p>
+<ul>
+<li>Pages HTML statiques transformées en pages PHP dynamiques</li>
+<li>Formulaires, sessions et connexion des utilisateurs</li>
+<li>Conception de la table des réservations</li>
+</ul>
+<div class="links"><a class="chip" href="https://github.com/Chadyhage/eval_sn1_phpmysql" rel="noopener">Voir le code</a></div>
+</article>
+</div>
+</div>
+</section>
+
+<section class="contact" id="contact">
+<div class="wrap">
+<div class="eyebrow" style="color:#F4C3A0">Contact</div>
+<h2>Un stage, un projet, une question&nbsp;?</h2>
+<p>Je cherche un stage en IA, automatisation, développement ou gestion de projet. Ponctuel, rigoureux, et prêt à tenir tous les postes qu'il faudra.</p>
+<div class="actions">
+<a class="btn" href="mailto:hagechady4@gmail.com">hagechady4@gmail.com</a>
+<a class="btn ghost" href="tel:+33682635749">+33 6 82 63 57 49</a>
+<a class="btn ghost" href="https://www.linkedin.com/in/chady-hage-a68b50421" rel="noopener">LinkedIn</a>
+<a class="btn ghost" href="cv/CV_Chady_Hage.pdf" download>CV en PDF</a>
+</div>
+<div class="sign">Merci de votre visite. — Chady</div>
+</div>
+</section>
+</main>
+<footer><div class="wrap">© 2026 Chady Hage · Lyon</div></footer>
+
+<dialog id="lb" aria-label="Agrandissement de l'image">
+<img id="lbImg" src="" alt="">
+<div class="bar"><p id="lbCap"></p><div><button class="nb" type="button" id="lbPrev" aria-label="Image précédente">←</button><button class="nb" type="button" id="lbNext" aria-label="Image suivante">→</button><button class="nb" type="button" id="lbClose">Fermer</button></div></div>
+</dialog>
+
+<script>
+const VIDEOS = [
+  ['E004', 'Le code n°1 — Le coffre à un million', 'Le code', 88],
+  ['E001', 'Qui ment ? n°1 — La bague de fiançailles', 'Qui ment ?', 66],
+  ['E008', "Simulation n°1 — Le jeu de l'argent", 'Simulation', 67],
+  ['E012', "Coulisses n°2 — Le vrai prix d'une bouteille en carré", 'Coulisses', 73],
+  ['E009', 'Le piège n°1 — Les trois coffres', 'Le piège', 68],
+  ['E007', 'Énigme n°1 — La boutique et le faux billet', 'Énigme', 66],
+  ['E011', 'Coulisses n°1 — Pourquoi tu te fais recaler', 'Coulisses', 70],
+  ['E005', 'Qui ment ? n°2 — Le collier de la comtesse', 'Qui ment ?', 41],
+  ['E013', 'Qui ment ? n°3 — La robe du défilé', 'Qui ment ?', 43],
+  ['E003', 'Tu préfères n°1 — 5 choix impossibles', 'Tu préfères', 42],
+  ['E010', 'Tu préfères n°2 — 5 pouvoirs qui coûtent cher', 'Tu préfères', 45],
+  ['E002', 'Dilemme n°1 — 5 millions ou le grand amour', 'Dilemme', 30],
+  ['E006', 'Dilemme n°2 — Le bouton rouge', 'Dilemme', 32],
+  ['E014', 'Dilemme n°3 — La porte de ton autre vie', 'Dilemme', 34]
+];
+const VILLA = [
+  ['01-piscine-a-debordement', 'Piscine à débordement face à la mer'],
+  ['02-facade-cote-mer', 'Façade côté mer'],
+  ['03-vue-aerienne', 'Vue aérienne du domaine'],
+  ['04-facade-de-nuit', 'Façade de nuit'],
+  ['05-salon-double-hauteur', 'Salon double hauteur'],
+  ['06-hall-et-aquarium', 'Hall et aquarium'],
+  ['07-suite-parentale', 'Suite parentale, vue mer'],
+  ['08-salle-de-bain-en-pierre', 'Salle de bain en pierre'],
+  ['09-cinema', 'Cinéma'],
+  ['10-club-prive', 'Club privé'],
+  ['11-bureau', 'Bureau'],
+  ['12-hangar-vehicules', 'Hangar à véhicules'],
+  ['13-allee-d-arrivee', "Allée d'arrivée"],
+  ['14-hamacs-face-a-la-mer', 'Hamacs face à la mer'],
+  ['15-verger', 'Verger'],
+  ['16-facade-sous-la-pluie', 'Façade sous la pluie']
+];
+const RUBE = [
+  ['rube-01-vue-3d', 'Vue 3D finale (Blender)'],
+  ['rube-02-face', 'Vue de face du parcours'],
+  ['rube-03-ascenseur', 'Ascenseur à spirale'],
+  ['rube-04-aiguillage', 'Aiguillage de sortie'],
+  ['rube-05-electronique', 'Électronique embarquée'],
+  ['rube-06-eclate', 'Vue éclatée']
+];
+
+const fmt = s => Math.floor(s / 60) + ' min ' + String(s % 60).padStart(2, '0');
+const vgrid = document.getElementById('vgrid');
+VIDEOS.forEach(([id, title, format, dur]) => {
+  const card = document.createElement('article');
+  card.className = 'vcard';
+  const v = document.createElement('video');
+  v.controls = true; v.preload = 'none'; v.playsInline = true;
+  v.poster = 'assets/motion/' + id + '.jpg';
+  v.src = 'assets/motion/' + id + '.mp4';
+  v.setAttribute('aria-label', title);
+  const t = document.createElement('div'); t.className = 't'; t.textContent = title;
+  const m = document.createElement('div'); m.className = 'm'; m.textContent = format + ' · ' + (dur >= 60 ? fmt(dur) : dur + ' s');
+  card.append(v, t, m);
+  vgrid.append(card);
+});
+document.addEventListener('play', e => {
+  document.querySelectorAll('video').forEach(o => { if (o !== e.target) o.pause(); });
+}, true);
+
+const lb = document.getElementById('lb'), lbImg = document.getElementById('lbImg'), lbCap = document.getElementById('lbCap');
+let cur = [], idx = 0;
+function show(i) { idx = (i + cur.length) % cur.length; lbImg.src = cur[idx][0]; lbImg.alt = cur[idx][1]; lbCap.textContent = cur[idx][1] + '  ·  ' + (idx + 1) + ' / ' + cur.length; }
+function gallery(elId, list, dir, prefix, bigFirst) {
+  const el = document.getElementById(elId);
+  const items = list.map(([f, cap]) => ['assets/' + dir + '/' + prefix + f + '.jpg', cap]);
+  items.forEach(([src, cap], i) => {
+    const b = document.createElement('button');
+    b.type = 'button';
+    if (bigFirst && i === 0) b.className = 'big';
+    b.setAttribute('aria-label', 'Agrandir : ' + cap);
+    const fig = document.createElement('figure'); fig.style.margin = '0'; fig.style.height = '100%';
+    const img = document.createElement('img'); img.src = src; img.alt = cap; img.loading = 'lazy';
+    const fc = document.createElement('figcaption'); fc.textContent = cap;
+    fig.append(img, fc); b.append(fig);
+    b.addEventListener('click', () => { cur = items; show(i); lb.showModal(); });
+    el.append(b);
+  });
+}
+gallery('villaGal', VILLA, 'villa', 'villa-', true);
+gallery('rubeGal', RUBE, 'rube', '', false);
+document.getElementById('lbPrev').onclick = () => show(idx - 1);
+document.getElementById('lbNext').onclick = () => show(idx + 1);
+document.getElementById('lbClose').onclick = () => lb.close();
+lb.addEventListener('click', e => { if (e.target === lb) lb.close(); });
+lb.addEventListener('keydown', e => { if (e.key === 'ArrowLeft') show(idx - 1); if (e.key === 'ArrowRight') show(idx + 1); });
+
+document.getElementById('ytBtn').addEventListener('click', function () {
+  const f = document.createElement('iframe');
+  f.src = 'https://www.youtube-nocookie.com/embed/1dl2BxFwS0g?autoplay=1&rel=0';
+  f.title = 'Événement The Next Play avec HandleYourGame';
+  f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+  f.allowFullscreen = true;
+  this.replaceChildren(f);
+  this.style.cursor = 'default';
+}, { once: true });
+</script>
+</body>
+</html>
