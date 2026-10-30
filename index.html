@@ -194,7 +194,7 @@ dialog button.nb:hover{background:rgba(255,255,255,.12)}
 <div class="pill"><i aria-hidden="true"></i><p>En recherche de stage <span>· IA · automatisation · développement · gestion de projet</span></p></div>
 <div class="actions">
 <a class="btn" href="cv/CV_Chady_Hage.pdf" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>Télécharger mon CV</a>
-<a class="btn ghost" href="mailto:hagechady4@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>M'écrire</a>
+<button class="btn ghost copy-mail" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><span class="lbl">Copier mon e-mail</span></button>
 <a class="btn ghost" href="https://www.linkedin.com/in/chady-hage-a68b50421" rel="noopener">LinkedIn</a>
 <a class="btn ghost" href="https://github.com/Chadyhage" rel="noopener">GitHub</a>
 </div>
@@ -370,7 +370,9 @@ dialog button.nb:hover{background:rgba(255,255,255,.12)}
 <h2>Un stage, un projet, une question&nbsp;?</h2>
 <p>Je cherche un stage en IA, automatisation, développement ou gestion de projet. Ponctuel, rigoureux, et prêt à tenir tous les postes qu'il faudra.</p>
 <div class="actions">
-<a class="btn" href="mailto:hagechady4@gmail.com">hagechady4@gmail.com</a>
+<button class="btn copy-mail" type="button"><span class="lbl">hagechady4@gmail.com · copier</span></button>
+<a class="btn ghost" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=hagechady4@gmail.com&amp;su=Proposition%20de%20stage" target="_blank" rel="noopener">Écrire via Gmail</a>
+<a class="btn ghost" href="https://outlook.office.com/mail/deeplink/compose?to=hagechady4@gmail.com&amp;subject=Proposition%20de%20stage" target="_blank" rel="noopener">Écrire via Outlook</a>
 <a class="btn ghost" href="tel:+33682635749">+33 6 82 63 57 49</a>
 <a class="btn ghost" href="https://www.linkedin.com/in/chady-hage-a68b50421" rel="noopener">LinkedIn</a>
 <a class="btn ghost" href="cv/CV_Chady_Hage.pdf" download>CV en PDF</a>
@@ -485,6 +487,15 @@ document.getElementById('ytBtn').addEventListener('click', function () {
   this.replaceChildren(f);
   this.style.cursor = 'default';
 }, { once: true });
+
+document.querySelectorAll('.copy-mail').forEach(b => {
+  const lbl = b.querySelector('.lbl'), base = lbl.textContent;
+  b.addEventListener('click', async () => {
+    try { await navigator.clipboard.writeText('hagechady4@gmail.com'); lbl.textContent = 'Adresse copiée ✓'; }
+    catch (e) { lbl.textContent = 'hagechady4@gmail.com'; }
+    setTimeout(() => { lbl.textContent = base; }, 2200);
+  });
+});
 </script>
 </body>
 </html>
