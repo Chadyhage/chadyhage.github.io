@@ -3,80 +3,75 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Chady Hage — Portfolio</title>
-<meta name="description" content="Portfolio de Chady Hage, étudiant à l'EPSI Lyon : motion design, architecture 3D, machine de Rube Goldberg, The Next Play, Live In Black, projets PHP et MySQL.">
-<meta property="og:title" content="Chady Hage — Portfolio">
-<meta property="og:description" content="Je transforme des idées en projets concrets — de A à Z.">
+<title>Chady Hage · Portfolio</title>
+<meta name="description" content="Portfolio de Chady Hage, étudiant en Bachelor Développeur IA à l'EPSI Lyon : Live In Black, TrokTrok, machine de Rube Goldberg (1re place en finale nationale), projets PHP et MySQL, The Next Play, motion design et 3D.">
+<meta property="og:title" content="Chady Hage · Portfolio">
+<meta property="og:description" content="Étudiant à l'EPSI Lyon, fondateur de Live In Black et TrokTrok, cofondateur de The Next Play. Recherche un stage en développement IA, automatisation ou gestion de projet.">
 <meta property="og:image" content="https://chadyhage.github.io/assets/villa/villa-01-piscine-a-debordement.jpg">
 <meta property="og:type" content="website">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23191714'/%3E%3Ctext x='32' y='43' font-family='Arial' font-weight='700' font-size='30' fill='%23E8803A' text-anchor='middle'%3ECH%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231F3A5F'/%3E%3Ctext x='32' y='43' font-family='Arial' font-weight='700' font-size='30' fill='%23FFFFFF' text-anchor='middle'%3ECH%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Caveat:wght@600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
 <script type="module" src="https://unpkg.com/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script>
 <style>
-:root{--bg:#FBFAF8;--paper:#FFFFFF;--ink:#191714;--ink2:#3A3632;--mute:#5C5750;--line:#E2DDD5;--acc:#E8803A;--accInk:#9E5727;--accSoft:#F9EBE1;--dark:#14120F}
+:root{--bg:#F7F8FA;--paper:#FFFFFF;--ink:#1D2228;--ink2:#3E4652;--mute:#5B6472;--line:#E3E7EC;--acc:#1F3A5F;--accInk:#1F3A5F;--accSoft:#EAF0F6;--dark:#13243A}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:72px}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
 img,video{max-width:100%;display:block}
 a{color:inherit}
 .wrap{max-width:1160px;margin:0 auto;padding:0 24px}
-.mono{font-family:'JetBrains Mono',ui-monospace,monospace}
-.eyebrow{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accInk)}
-h1,h2,h3{font-family:'Bricolage Grotesque',Inter,sans-serif;letter-spacing:-.02em;margin:0;text-wrap:balance}
+.eyebrow{font-size:14px;font-weight:600;color:var(--acc)}
+h1,h2,h3{font-family:Inter,system-ui,sans-serif;letter-spacing:-.015em;margin:0;text-wrap:balance}
 p{text-wrap:pretty}
 
 /* nav */
-.nav{position:sticky;top:0;z-index:20;background:rgba(251,250,248,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{position:sticky;top:0;z-index:20;background:rgba(247,248,250,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 .nav .wrap{display:flex;align-items:center;gap:20px;min-height:60px;flex-wrap:wrap}
-.brand{font-family:'Bricolage Grotesque',Inter,sans-serif;font-weight:800;font-size:19px;text-decoration:none;letter-spacing:-.02em}
+.brand{font-weight:700;font-size:18px;text-decoration:none;letter-spacing:-.01em;color:var(--acc)}
 .nav ul{list-style:none;margin:0 0 0 auto;padding:0;display:flex;gap:4px;flex-wrap:wrap}
 .nav ul a{display:block;padding:8px 10px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:500;color:var(--ink2)}
 .nav ul a:hover{background:var(--accSoft);color:var(--ink)}
-.btn{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 18px;border-radius:999px;border:1.5px solid var(--ink);background:var(--ink);color:#fff;font-weight:600;font-size:15px;text-decoration:none;cursor:pointer}
-.btn:hover{background:#000}
-.btn.ghost{background:transparent;color:var(--ink)}
+.btn{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 18px;border-radius:8px;border:1.5px solid var(--acc);background:var(--acc);color:#fff;font-weight:600;font-size:15px;text-decoration:none;cursor:pointer;font-family:inherit}
+.btn:hover{background:#162B47}
+.btn.ghost{background:transparent;color:var(--acc)}
 .btn.ghost:hover{background:var(--accSoft)}
 .btn svg{width:17px;height:17px;flex-shrink:0}
 
 /* hero */
 .hero{padding:64px 0 40px}
 .hero .wrap.top{display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:48px;align-items:center}
-.hero h1{font-size:clamp(46px,8vw,88px);font-weight:800;line-height:.95;letter-spacing:-.04em;margin:10px 0 14px}
+.hero h1{font-size:clamp(40px,6vw,64px);font-weight:700;line-height:1.02;letter-spacing:-.025em;margin:0 0 10px;color:var(--acc)}
 .hero .study{font-size:18px;font-weight:600;margin:0}
-.hero .tag{font-family:'Bricolage Grotesque',Inter,sans-serif;font-size:clamp(20px,2.6vw,26px);font-weight:500;color:var(--ink2);margin:10px 0 20px}
-.hero .tag mark{background:linear-gradient(transparent 58%,#F4C3A0 58%);color:inherit}
-.pill{display:inline-flex;align-items:baseline;gap:10px;padding:8px 16px;border:1.5px solid var(--acc);border-radius:999px;font-size:15px;font-weight:600;background:var(--paper)}
-.pill i{width:8px;height:8px;border-radius:50%;background:var(--acc);flex-shrink:0;transform:translateY(-1px)}
-.pill p{margin:0}
-.pill span{font-weight:400;color:var(--mute)}
+.hero .intro{font-size:18px;line-height:1.6;color:var(--ink2);margin:16px 0 0;max-width:660px}
+.hero .intro strong{color:var(--ink);font-weight:600}
 .actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
 .photo{position:relative;width:240px;height:240px;justify-self:end}
-.photo::before{content:"";position:absolute;inset:14px -14px -14px 14px;border-radius:28px;background:var(--acc)}
-.photo img{position:relative;width:240px;height:240px;object-fit:cover;border-radius:28px}
+.photo img{position:relative;width:240px;height:240px;object-fit:cover;border-radius:16px}
 
 /* stats */
-.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:2px solid var(--ink);border-bottom:1px solid var(--line);margin-top:8px}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:2px solid var(--acc);border-bottom:1px solid var(--line);margin-top:8px}
 .stat{padding:20px 18px 18px;border-right:1px solid var(--line)}
 .stat:last-child{border-right:0}
-.stat b{display:block;font-family:'Bricolage Grotesque',Inter,sans-serif;font-size:clamp(30px,4vw,44px);font-weight:800;letter-spacing:-.03em;line-height:1}
+.stat b{display:block;font-size:clamp(28px,3.6vw,40px);font-weight:700;letter-spacing:-.02em;line-height:1;color:var(--acc)}
 .stat span{display:block;margin-top:6px;font-size:14px;color:var(--mute)}
+.stat b sup{font-size:.5em;vertical-align:.7em;margin-right:2px}
 
 /* sections */
 section.block{padding:72px 0 8px}
 .head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:32px;align-items:end;margin-bottom:28px}
-.head h2{font-size:clamp(32px,4.4vw,48px);font-weight:800;line-height:1;margin-top:8px}
+.head h2{font-size:clamp(30px,4vw,42px);font-weight:700;line-height:1.08;margin-top:6px}
 .head p{margin:0;color:var(--ink2);font-size:17px}
-.facts{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
-.facts span{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:12px;padding:5px 10px;border-radius:999px;background:var(--paper);border:1px solid var(--line);color:var(--ink2)}
+.tools{margin:12px 0 0 !important;font-size:15px !important;color:var(--mute) !important}
+.tools strong{color:var(--ink);font-weight:600}
 
 /* motion grid */
 .vgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(210px,100%),1fr));gap:18px}
 .vcard{display:flex;flex-direction:column;gap:9px}
 .vcard video{width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:14px;background:#0b0a09}
 .vcard .t{font-weight:600;font-size:14.5px;line-height:1.3}
-.vcard .m{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:12px;color:var(--mute)}
+.vcard .m{font-size:13px;color:var(--mute)}
 .vcard.feat{grid-column:span 1}
 
 /* gallery */
@@ -92,22 +87,18 @@ section.block{padding:72px 0 8px}
 /* rube */
 .rube{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px}
 .panel{background:var(--paper);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
-.panel .lbl{padding:12px 16px;border-bottom:1px solid var(--line);font-family:'JetBrains Mono',ui-monospace,monospace;font-size:12px;color:var(--mute);display:flex;justify-content:space-between;gap:10px}
+.panel .lbl{padding:12px 16px;border-bottom:1px solid var(--line);font-size:13px;color:var(--mute);display:flex;justify-content:space-between;gap:10px}
 .panel video{width:100%;aspect-ratio:832/464;background:#000}
-model-viewer{width:100%;height:100%;min-height:340px;background:radial-gradient(circle at 50% 40%,#fff,#ECE8E1)}
+model-viewer{width:100%;height:100%;min-height:340px;background:radial-gradient(circle at 50% 40%,#fff,#E6EAF0)}
 .dl{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 22px}
-.case{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-bottom:22px}
-.case div{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:16px}
-.case b{display:block;font-family:'Bricolage Grotesque',Inter,sans-serif;font-size:17px;margin-bottom:4px}
-.case p{margin:0;font-size:14.5px;color:var(--ink2)}
-.case div.acc{border:1.5px solid var(--acc);background:var(--accSoft)}
+.story{max-width:860px;margin:0 0 22px;font-size:16px;color:var(--ink2)}
 
 /* tnp */
 .tnp{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:18px;align-items:stretch}
-.yt{all:unset;cursor:pointer;position:relative;display:block;border-radius:16px;overflow:hidden;aspect-ratio:16/9;background:#000}
+.yt{all:unset;cursor:pointer;position:relative;display:block;width:100%;box-sizing:border-box;border-radius:16px;overflow:hidden;aspect-ratio:16/9;background:#000}
 .yt img{width:100%;height:100%;object-fit:cover;opacity:.85}
 .yt .play{position:absolute;inset:0;display:grid;place-items:center}
-.yt .play span{width:76px;height:76px;border-radius:50%;background:var(--acc);display:grid;place-items:center;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+.yt .play span{width:72px;height:72px;border-radius:50%;background:var(--acc);display:grid;place-items:center;box-shadow:0 10px 30px rgba(0,0,0,.35)}
 .yt .cap{position:absolute;left:16px;bottom:14px;color:#fff;font-weight:600;font-size:15px;text-shadow:0 1px 8px rgba(0,0,0,.6)}
 .yt:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
 .yt iframe{width:100%;height:100%;border:0}
@@ -117,33 +108,32 @@ model-viewer{width:100%;height:100%;min-height:340px;background:radial-gradient(
 /* cards */
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:16px}
 .card{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:10px}
-.card h3{font-size:22px;font-weight:700}
+.card h3{font-size:21px;font-weight:700}
 .card .role{font-size:14px;color:var(--mute);margin:-6px 0 2px}
 .card ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:7px}
 .card li{display:grid;grid-template-columns:10px minmax(0,1fr);gap:8px;font-size:15px;color:var(--ink2)}
 .card li::before{content:"";width:6px;height:6px;margin-top:9px;background:var(--acc)}
 .card .links{margin-top:auto;padding-top:6px;display:flex;flex-wrap:wrap;gap:8px}
-.chip{display:inline-flex;align-items:center;gap:6px;min-height:36px;padding:0 13px;border-radius:999px;border:1px solid var(--ink);font-size:13.5px;font-weight:600;text-decoration:none}
+.chip{display:inline-flex;align-items:center;gap:6px;min-height:36px;padding:0 13px;border-radius:8px;border:1px solid var(--acc);color:var(--acc);font-size:13.5px;font-weight:600;text-decoration:none}
 .chip:hover{background:var(--accSoft)}
-.tags{display:flex;flex-wrap:wrap;gap:6px}
-.tags span{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:11.5px;padding:3px 9px;border-radius:6px;background:var(--accSoft);color:var(--accInk)}
+.card .tools{margin:4px 0 0 !important;font-size:14px !important}
 
 /* code */
-.code .card{border-top:4px solid var(--ink)}
+.code .card{border-top:3px solid var(--acc)}
 
 /* contact */
-.contact{margin:88px 0 0;background:var(--dark);color:#F5F1EA;padding:64px 0}
-.contact h2{font-size:clamp(34px,5vw,56px);font-weight:800;line-height:1}
-.contact p{color:#CFC8BD;font-size:17px;max-width:560px}
-.contact .btn{background:var(--acc);border-color:var(--acc);color:#191714}
-.contact .btn.ghost{background:transparent;color:#F5F1EA;border-color:#F5F1EA}
+.contact{margin:88px 0 0;background:var(--dark);color:#F2F5F9;padding:64px 0}
+.contact h2{font-size:clamp(30px,4.4vw,46px);font-weight:700;line-height:1.08}
+.contact p{color:#C3CEDB;font-size:17px;max-width:600px}
+.contact .btn{background:#FFFFFF;border-color:#FFFFFF;color:var(--dark)}
+.contact .btn:hover{background:#E6ECF3}
+.contact .btn.ghost{background:transparent;color:#F2F5F9;border-color:#8FA3BC}
 .contact .btn.ghost:hover{background:rgba(255,255,255,.08)}
-.contact .sign{font-family:Caveat,cursive;font-size:30px;color:#F4C3A0;margin-top:26px}
-footer{background:var(--dark);color:#9C958A;font-size:13px;padding:0 0 28px}
+footer{background:var(--dark);color:#93A3B8;font-size:13px;padding:0 0 28px}
 
 /* lightbox */
 dialog{border:0;padding:0;background:transparent;max-width:min(1200px,94vw);max-height:92vh;overflow:visible}
-dialog::backdrop{background:rgba(10,9,8,.88)}
+dialog::backdrop{background:rgba(10,16,26,.9)}
 dialog img{max-height:82vh;width:auto;margin:0 auto;border-radius:10px}
 dialog .bar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:12px;color:#fff}
 dialog .bar p{margin:0;font-weight:500}
@@ -159,7 +149,6 @@ dialog button.nb:hover{background:rgba(255,255,255,.12)}
   .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
   .stat:nth-child(2){border-right:0}
   .stat:nth-child(-n+2){border-bottom:1px solid var(--line)}
-  .case{grid-template-columns:1fr}
   .nav ul{margin-left:0;width:100%;overflow-x:auto;flex-wrap:nowrap;padding-bottom:6px;scrollbar-width:none}
   .nav ul::-webkit-scrollbar{display:none}
   .nav ul a{white-space:nowrap}
@@ -173,12 +162,12 @@ dialog button.nb:hover{background:rgba(255,255,255,.12)}
 <div class="wrap">
 <a class="brand" href="#top">Chady Hage</a>
 <ul>
+<li><a href="#projets">Entrepreneuriat</a></li>
+<li><a href="#rube">Rube Goldberg</a></li>
+<li><a href="#code">Code</a></li>
+<li><a href="#tnp">The Next Play</a></li>
 <li><a href="#motion">Motion design</a></li>
 <li><a href="#villa">Villa 3D</a></li>
-<li><a href="#rube">Rube Goldberg</a></li>
-<li><a href="#tnp">The Next Play</a></li>
-<li><a href="#projets">Entrepreneuriat</a></li>
-<li><a href="#code">Code</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
 </div>
@@ -187,11 +176,10 @@ dialog button.nb:hover{background:rgba(255,255,255,.12)}
 <header class="hero" id="top">
 <div class="wrap top">
 <div>
-<div class="eyebrow">Portfolio · 2026</div>
 <h1>Chady Hage</h1>
-<p class="study">Étudiant en 1<sup>re</sup> année à l'EPSI Lyon — parcours « Les fondamentaux », vers le Bachelor Développeur IA</p>
-<p class="tag">Je transforme des idées en projets concrets — <mark>de A à Z</mark>.</p>
-<div class="pill"><i aria-hidden="true"></i><p>En recherche de stage <span>· IA · automatisation · développement · gestion de projet</span></p></div>
+<p class="study">Étudiant en 1<sup>re</sup> année, Bachelor Développeur IA · EPSI Lyon</p>
+<p class="intro">J'ai fondé deux projets numériques, Live In Black et TrokTrok, et cofondé The Next Play, un média basket à Lomé. D'origine libanaise, j'ai grandi en Afrique de l'Ouest et suivi ma scolarité dans le réseau des lycées français : j'ai l'habitude de travailler avec des interlocuteurs très différents.</p>
+<p class="intro"><strong>Je recherche un stage en développement IA, automatisation ou gestion de projet.</strong></p>
 <div class="actions">
 <a class="btn" href="cv/CV_Chady_Hage.pdf" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>Télécharger mon CV</a>
 <button class="btn ghost copy-mail" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><span class="lbl">Copier mon e-mail</span></button>
@@ -203,132 +191,77 @@ dialog button.nb:hover{background:rgba(255,255,255,.12)}
 </div>
 <div class="wrap">
 <div class="stats">
-<div class="stat"><b>7</b><span>projets menés, de l'idée au rendu</span></div>
-<div class="stat"><b>14</b><span>vidéos en motion design</span></div>
-<div class="stat"><b>2 000+</b><span>spectateurs réunis lors de nos événements</span></div>
+<div class="stat"><b>1<sup>re</sup> place</b><span>en finale nationale avec la machine de Rube Goldberg (EPSI)</span></div>
 <div class="stat"><b>127</b><span>fonctionnalités spécifiées pour Live In Black</span></div>
+<div class="stat"><b>230 000</b><span>vues par mois sur Instagram pour The Next Play</span></div>
+<div class="stat"><b>2 000+</b><span>spectateurs réunis lors de nos événements à Lomé</span></div>
 </div>
 </div>
 </header>
 
 <main>
 
-<section class="block" id="motion">
-<div class="wrap">
-<div class="head">
-<div><div class="eyebrow">01 · Création</div><h2>Motion design</h2></div>
-<div><p>Une série de 14 vidéos courtes au format vertical — énigmes, dilemmes, simulations — conçues pour TikTok, Instagram Reels et YouTube Shorts. Scénario, identité visuelle, animation et montage : chaque épisode est pensé pour accrocher dès la première seconde et garder le spectateur jusqu'à la révélation finale.</p>
-<div class="facts"><span>Scénario</span><span>Motion design</span><span>Montage</span><span>Voix IA</span><span>Stratégie de publication</span></div></div>
-</div>
-<div class="vgrid" id="vgrid"></div>
-</div>
-</section>
-
-<section class="block" id="villa">
-<div class="wrap">
-<div class="head">
-<div><div class="eyebrow">02 · Architecture &amp; 3D</div><h2>Villa en bord de mer à Cotonou</h2></div>
-<div><p>Projet personnel de conception architecturale : une villa face à la mer, pensée pour être visitée en réalité virtuelle. Cinq suites, cinéma d'une vingtaine de places, club privé, piscine à débordement avec bar immergé, hangar pour les véhicules. Ventilation naturelle, fusion intérieur-extérieur, bois, pierre claire, cuivre et terracotta.</p>
-<div class="facts"><span>Twinmotion</span><span>7 blocs GLB</span><span>Scripts Python</span><span>Visite VR</span></div></div>
-</div>
-<div class="gal" id="villaGal"></div>
-</div>
-</section>
-
-<section class="block" id="rube">
-<div class="wrap">
-<div class="head">
-<div><div class="eyebrow">03 · Ingénierie · EPSI</div><h2>Machine de Rube Goldberg</h2></div>
-<div><p>Workshop de 1<sup>re</sup> année, groupe de quatre — j'en étais le chef de projet. Le défi : faire parcourir à une bille de 20 mm un trajet mécanique et électronique entièrement autonome, dans une boîte de 40 × 40 × 20 cm, pendant 60 à 120 secondes, en touchant au moins quatre faces.</p>
-<div class="facts"><span>Arduino Mega</span><span>Capteurs infrarouges</span><span>Servomoteurs</span><span>Blender</span><span>Impression 3D</span></div></div>
-</div>
-<div class="rube">
-<div class="panel"><div class="lbl"><span>Démonstration du prototype</span><span>1 min 16</span></div><video controls preload="metadata" playsinline poster="assets/rube/rube-02-face.jpg"><source src="assets/rube/demo-machine.mp4" type="video/mp4">Votre navigateur ne lit pas cette vidéo.</video></div>
-<div class="panel"><div class="lbl"><span>Modèle 3D — faites-le tourner</span><span>glisser · zoomer</span></div><model-viewer src="assets/rube/machine.glb" poster="assets/rube/rube-01-vue-3d.jpg" alt="Modèle 3D interactif de la machine de Rube Goldberg" camera-controls touch-action="pan-y" auto-rotate auto-rotate-delay="2000" rotation-per-second="18deg" shadow-intensity="0.6" exposure="1.05" camera-orbit="35deg 72deg auto" loading="lazy"></model-viewer></div>
-</div>
-<div class="dl">
-<a class="btn" href="assets/rube/rapport-technique-rube-goldberg.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/><path d="M8 13h8M8 17h5"/></svg>Lire le rapport technique (PDF)</a>
-<a class="btn ghost" href="assets/rube/machine-rube-goldberg.blend" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>Fichier Blender (.blend · 17 Mo)</a>
-<a class="btn ghost" href="assets/rube/machine.glb" download>Modèle 3D (.glb · 2,7 Mo)</a>
-</div>
-<div class="case">
-<div><b>Le problème</b><p>Le parcours devait être entièrement imprimé en résine : impressions trop longues, pièces ratées, ajustements impossibles dans la boîte réelle.</p></div>
-<div><b>L'alternative</b><p>Rails en carton plume réglables à la main, pièces 3D conservées là où elles comptent, ascenseur à spirale entraîné par un motoréducteur 12 V.</p></div>
-<div class="acc"><b>Le résultat</b><p>Un prototype fiable qui tient le cahier des charges : bille autonome de 60 à 120 s, quatre faces touchées, aucune intervention humaine.</p></div>
-</div>
-<div class="gal" id="rubeGal"></div>
-</div>
-</section>
-
-<section class="block" id="tnp">
-<div class="wrap">
-<div class="head">
-<div><div class="eyebrow">04 · Média &amp; événements</div><h2>The Next Play</h2></div>
-<div><p>Média basket co-fondé à Lomé. Je filme les matchs, je monte les vidéos et je crée les animations — jusqu'à 230 000 vues par mois sur Instagram, en croissance 100 % organique. J'ai démarché le youtubeur HandleYourGame (220 000 abonnés) : deux événements au Stade Omnisports de Lomé, plus de 1 000 spectateurs chacun.</p>
-<div class="facts"><span>Tournage</span><span>Montage</span><span>Partenariats</span><span>Événementiel</span><span>Site web</span></div></div>
-</div>
-<div class="tnp">
-<button class="yt" type="button" id="ytBtn" aria-label="Lire la vidéo de l'événement avec HandleYourGame sur YouTube">
-<img src="https://i.ytimg.com/vi/1dl2BxFwS0g/hqdefault.jpg" alt="" loading="lazy">
-<span class="play" aria-hidden="true"><span><svg width="28" height="28" viewBox="0 0 24 24" fill="#191714"><path d="M8 5v14l11-7z"/></svg></span></span>
-<span class="cap">Événement avec HandleYourGame — Stade Omnisports de Lomé</span>
-</button>
-<div class="tgrid">
-<img src="assets/tnp/hero.jpg" alt="Gymnase plein lors d'un événement The Next Play" loading="lazy">
-<img src="assets/tnp/galerie-tribunes.jpg" alt="Tribunes pendant un événement" loading="lazy">
-<img src="assets/tnp/galerie-joueurs.jpg" alt="Joueurs en maillots The Next Play" loading="lazy">
-<img src="assets/tnp/tournoi-1v1.jpg" alt="Affiche du tournoi 1v1 The Next Play" loading="lazy">
-</div>
-</div>
-<div class="dl">
-<a class="btn" href="https://thenextplay.site/" rel="noopener">Voir le site thenextplay.site</a>
-<a class="btn ghost" href="https://www.instagram.com/the_next_play2k25" rel="noopener">Instagram @the_next_play2k25</a>
-</div>
-</div>
-</section>
-
 <section class="block" id="projets">
 <div class="wrap">
 <div class="head">
-<div><div class="eyebrow">05 · Entrepreneuriat</div><h2>Mes entreprises</h2></div>
-<div><p>Deux projets que je porte seul, de la première idée jusqu'au lancement : le produit, les chiffres, le juridique et le commercial.</p></div>
+<div><div class="eyebrow">Entrepreneuriat</div><h2>Mes entreprises</h2></div>
+<div><p>Deux projets que je porte seul, de la première idée jusqu'au lancement : le produit, les chiffres, le juridique et le commercial.</p></div>
 </div>
 <div class="cards">
 <article class="card">
 <h3>Live In Black</h3>
-<p class="role">Fondateur · billetterie mobile, Bénin et Togo · lancement visé en 2027</p>
+<p class="role">Fondateur · billetterie en ligne pour le Bénin et le Togo · lancement prévu en 2027</p>
 <ul>
-<li><strong>Méthode agile inspirée de Scrum :</strong> backlog de 127 fonctionnalités en user stories priorisées, rôle de Product Owner face au développeur, itérations validées à chaque version</li>
-<li><strong>Outils :</strong> Word (cahier des charges, spécifications), draw.io (user flows), IA générative (rédaction, vérification)</li>
-<li>Modèle économique complet et simulateur financier sur 7 marchés d'Afrique de l'Ouest</li>
-<li>Paiements Mobile Money et carte via FedaPay</li>
-<li>Création de la société, politiques de confidentialité, contrats avec le développeur</li>
-<li>Démarchage des premiers organisateurs et contrats de lancement</li>
+<li>Analyse des besoins et cahier des charges de la V1 : 127 fonctionnalités rédigées en user stories, réparties sur 6 espaces (client, organisateur, prestataire, administration…)</li>
+<li>Pilotage du développeur prestataire en tant que Product Owner : priorisation du backlog et validation de chaque version, dans une démarche agile inspirée de Scrum</li>
+<li>Modèle économique (commission de 5 % par billet, revente officielle sans majoration, assurance billet, réservation de place) et simulateur financier avec tableau de bord par événement</li>
+<li>Paiement Mobile Money via FedaPay, avec répartition automatique entre la plateforme et l'organisateur</li>
+<li>Création de la société (SARLU au Bénin), politiques de confidentialité, contrats et accord de confidentialité du développeur, démarchage des premiers organisateurs</li>
 </ul>
-<div class="tags"><span>Produit</span><span>Finance</span><span>Juridique</span><span>Commercial</span><span>Pilotage tech</span></div>
+<p class="tools"><strong>Outils :</strong> Word, draw.io, Excel, Claude</p>
 </article>
 <article class="card">
 <h3>TrokTrok</h3>
 <p class="role">Fondateur · plateforme de troc entre particuliers</p>
 <ul>
-<li>On n'achète pas, on échange : annonce publiée en 30 secondes</li>
-<li>Jauge qui indique si l'échange proposé est équilibré</li>
-<li>Négociation intégrée entre les deux parties, zéro commission</li>
-<li>Script d'une publicité audio de 29 secondes pour la radio et les réseaux</li>
+<li>Conception du service, de l'idée à la mise en ligne sur troktrok.com</li>
+<li>Publication d'une annonce en 30 secondes, première annonce gratuite</li>
+<li>Jauge qui indique si l'échange proposé est équilibré, négociation par messagerie, zéro commission</li>
+<li>Écriture et production d'une publicité audio de 29 secondes (voix générée par IA)</li>
 </ul>
-<div class="tags"><span>Produit</span><span>Web</span><span>Communication</span></div>
 <div class="links"><a class="chip" href="https://troktrok.com/" rel="noopener">troktrok.com</a></div>
 </article>
 </div>
 </div>
 </section>
 
+<section class="block" id="rube">
+<div class="wrap">
+<div class="head">
+<div><div class="eyebrow">Projet IoT · EPSI Lyon · 1<sup>re</sup> place en finale nationale</div><h2>Machine de Rube Goldberg</h2></div>
+<div><p>Workshop de 1<sup>re</sup> année en équipe de quatre, dont j'étais le chef de projet, récompensé par la <strong>1<sup>re</sup> place en finale nationale</strong>. Le défi : faire parcourir à une bille de 20 mm un trajet mécanique et électronique entièrement autonome, dans une boîte de 40 × 40 × 20 cm, pendant 60 à 120 secondes, en touchant au moins quatre faces.</p>
+<p class="tools"><strong>Matériel et outils :</strong> Arduino Mega, capteurs infrarouges, servomoteurs, Blender, impression 3D</p></div>
+</div>
+<div class="rube">
+<div class="panel"><div class="lbl"><span>Démonstration du prototype</span><span>1 min 16</span></div><video controls preload="metadata" playsinline poster="assets/rube/rube-02-face.jpg"><source src="assets/rube/demo-machine.mp4" type="video/mp4">Votre navigateur ne lit pas cette vidéo.</video></div>
+<div class="panel"><div class="lbl"><span>Modèle 3D interactif</span><span>glisser pour tourner, molette pour zoomer</span></div><model-viewer src="assets/rube/machine.glb" poster="assets/rube/rube-01-vue-3d.jpg" alt="Modèle 3D interactif de la machine de Rube Goldberg" camera-controls touch-action="pan-y" auto-rotate auto-rotate-delay="2000" rotation-per-second="18deg" shadow-intensity="0.6" exposure="1.05" camera-orbit="35deg 72deg auto" loading="lazy"></model-viewer></div>
+</div>
+<div class="dl">
+<a class="btn" href="assets/rube/rapport-technique-rube-goldberg.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/><path d="M8 13h8M8 17h5"/></svg>Lire le rapport technique (PDF)</a>
+<a class="btn ghost" href="assets/rube/machine-rube-goldberg.blend" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>Fichier Blender (.blend · 17 Mo)</a>
+<a class="btn ghost" href="assets/rube/machine.glb" download>Modèle 3D (.glb · 2,7 Mo)</a>
+</div>
+<p class="story">Le parcours devait d'abord être entièrement imprimé en résine, mais les impressions étaient trop longues et les pièces ne s'ajustaient pas dans la boîte réelle. J'ai proposé de passer à des rails en carton plume réglables à la main, en gardant les pièces 3D là où elles comptaient et un ascenseur à spirale entraîné par un motoréducteur 12 V. Le prototype est devenu fiable : 60 à 120 secondes de parcours autonome, quatre faces touchées, aucune intervention.</p>
+<div class="gal" id="rubeGal"></div>
+</div>
+</section>
+
 <section class="block code" id="code">
 <div class="wrap">
 <div class="head">
-<div><div class="eyebrow">06 · Développement &amp; data</div><h2>Code</h2></div>
+<div><div class="eyebrow">EPSI Lyon · développement et bases de données</div><h2>Code</h2></div>
 <div><p>Ce que j'apprends à l'EPSI, je le mets tout de suite en pratique : bases de données conçues avec Merise, requêtes SQL, sites PHP connectés à MySQL. Le code est sur GitHub.</p>
-<div class="facts"><span>PHP</span><span>SQL · MySQL</span><span>Merise (MCD · MLD)</span><span>HTML · CSS</span><span>Python</span><span>Arduino</span><span>Git</span></div></div>
+<p class="tools"><strong>Langages et outils :</strong> PHP, SQL (MySQL), Merise (MCD, MLD), HTML, CSS, Python, Arduino, Git</p></div>
 </div>
 <div class="cards">
 <article class="card">
@@ -365,11 +298,59 @@ dialog button.nb:hover{background:rgba(255,255,255,.12)}
 </div>
 </section>
 
+<section class="block" id="tnp">
+<div class="wrap">
+<div class="head">
+<div><div class="eyebrow">Cofondateur · média basket à Lomé</div><h2>The Next Play</h2></div>
+<div><p>Je filme les matchs, je monte les vidéos et je crée les animations : jusqu'à 230 000 vues par mois sur Instagram, sans publicité payante. J'ai démarché le youtubeur HandleYourGame (220 000 abonnés) et nous avons coorganisé deux événements au Stade Omnisports de Lomé, plus de 1 000 spectateurs chacun. J'ai aussi organisé un tournoi 1v1 (100 000 FCFA de dotation, plus de 300 spectateurs) et noué des partenariats avec des restaurants, des hôtels et des marques locales.</p></div>
+</div>
+<div class="tnp">
+<button class="yt" type="button" id="ytBtn" aria-label="Lire la vidéo de l'événement avec HandleYourGame sur YouTube">
+<img src="https://i.ytimg.com/vi/1dl2BxFwS0g/hqdefault.jpg" alt="" loading="lazy">
+<span class="play" aria-hidden="true"><span><svg width="28" height="28" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M8 5v14l11-7z"/></svg></span></span>
+<span class="cap">Événement avec HandleYourGame au Stade Omnisports de Lomé</span>
+</button>
+<div class="tgrid">
+<img src="assets/tnp/hero.jpg" alt="Gymnase plein lors d'un événement The Next Play" loading="lazy">
+<img src="assets/tnp/galerie-tribunes.jpg" alt="Tribunes pendant un événement" loading="lazy">
+<img src="assets/tnp/galerie-joueurs.jpg" alt="Joueurs en maillots The Next Play" loading="lazy">
+<img src="assets/tnp/tournoi-1v1.jpg" alt="Affiche du tournoi 1v1 The Next Play" loading="lazy">
+</div>
+</div>
+<div class="dl">
+<a class="btn" href="https://thenextplay.site/" rel="noopener">Voir le site thenextplay.site</a>
+<a class="btn ghost" href="https://www.instagram.com/the_next_play2k25" rel="noopener">Instagram @the_next_play2k25</a>
+</div>
+</div>
+</section>
+
+<section class="block" id="motion">
+<div class="wrap">
+<div class="head">
+<div><div class="eyebrow">Projet personnel · création vidéo</div><h2>Motion design</h2></div>
+<div><p>Une série de 14 vidéos courtes au format vertical (énigmes, dilemmes, simulations) pour TikTok, Instagram Reels et YouTube Shorts. J'ai écrit les scénarios, créé l'identité visuelle, animé et monté chaque épisode, avec des voix générées par IA.</p>
+<p class="tools"><strong>Ce que j'ai fait :</strong> scénario, motion design, montage, voix IA, stratégie de publication</p></div>
+</div>
+<div class="vgrid" id="vgrid"></div>
+</div>
+</section>
+
+<section class="block" id="villa">
+<div class="wrap">
+<div class="head">
+<div><div class="eyebrow">Projet personnel · architecture et 3D</div><h2>Villa en bord de mer à Cotonou</h2></div>
+<div><p>Projet personnel de conception architecturale : une villa face à la mer, pensée pour être visitée en réalité virtuelle. Cinq suites, cinéma d'une vingtaine de places, club privé, piscine à débordement avec bar immergé, hangar pour les véhicules. Ventilation naturelle, fusion intérieur-extérieur, bois, pierre claire, cuivre et terracotta.</p>
+<p class="tools"><strong>Outils :</strong> Twinmotion, scripts Python, modèle découpé en 7 blocs GLB, visite en réalité virtuelle</p></div>
+</div>
+<div class="gal" id="villaGal"></div>
+</div>
+</section>
+
 <section class="contact" id="contact">
 <div class="wrap">
-<div class="eyebrow" style="color:#F4C3A0">Contact</div>
+<div class="eyebrow" style="color:#AFC3DA">Contact</div>
 <h2>Un stage, un projet, une question&nbsp;?</h2>
-<p>Je cherche un stage en IA, automatisation, développement ou gestion de projet. Ponctuel, rigoureux, et prêt à tenir tous les postes qu'il faudra.</p>
+<p>Je recherche un stage en développement IA, automatisation ou gestion de projet. Le plus simple : m'écrire ou m'appeler, je réponds rapidement.</p>
 <div class="actions">
 <button class="btn copy-mail" type="button"><span class="lbl">hagechady4@gmail.com · copier</span></button>
 <a class="btn ghost" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=hagechady4@gmail.com&amp;su=Proposition%20de%20stage" target="_blank" rel="noopener">Écrire via Gmail</a>
@@ -378,7 +359,6 @@ dialog button.nb:hover{background:rgba(255,255,255,.12)}
 <a class="btn ghost" href="https://www.linkedin.com/in/chady-hage-a68b50421" rel="noopener">LinkedIn</a>
 <a class="btn ghost" href="cv/CV_Chady_Hage.pdf" download>CV en PDF</a>
 </div>
-<div class="sign">Merci de votre visite. — Chady</div>
 </div>
 </section>
 </main>
